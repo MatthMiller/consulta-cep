@@ -1,0 +1,151 @@
+body {
+    background-color: #191919;
+    margin: 0;
+    color: #EFEFEF;
+}
+
+h1, span, p, span, label, input {
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dados-container {
+    background-color: #050505;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.titulo {
+    font-family: 'Bitter', serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.titulo span{
+    color: rgba(208, 19, 10, 1);
+}
+
+form {
+    margin-top: 30px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+form label {
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 5px;
+    color: #D6D6D6;
+}
+
+
+form input[type="text"] {
+    width: 100%;
+    font-family: 'Bitter', serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    box-sizing: border-box;
+
+    background-color: #1E1E1E;
+    border: 1.5px solid #121212;
+    border-radius: 4px;
+    padding: 10px 12px;
+    color: #D6D6D6;
+}
+
+form button {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border: 2px solid #EFEFEF;
+    background: none;
+    color: #EFEFEF;
+
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+form button:hover {
+    border-color: rgba(208, 19, 10, 1);
+    color: rgba(208, 19, 10, 1);
+}
+
+.resultado::before {
+    display: block;
+    content: "";
+    height: 2px;
+    width: calc(100% - 20px);
+    background-color: #121212;
+    position: absolute;
+    left: 10px;
+    top: -26px;
+}
+
+.resultado {
+    color: #737373;
+    position: relative;
+    margin-top: 50px;
+}
+
+.resultado li {
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.resultado li:not(:nth-child(1)) {
+    margin-top: 20px;
+}
+
+.resultado li span {
+    color: #EFEFEF;
+}
+
+@media (max-width: 550px) {
+    body {
+        background-color: #050505;
+    }
+
+    form div {
+        flex-flow: column;
+        column-gap: 0;
+        row-gap: 10px;
+    }
+
+    form div button {
+        align-self: end;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .dados-container {
+        margin-top: 0;
+        padding: 25px 20px;
+    }
+}
